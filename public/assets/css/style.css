@@ -1,0 +1,317 @@
+/**********************************
+    Default stylesheet
+***********************************/
+
+:root {
+    /* Define fonts */
+    --font-main     : 'Roboto', sans-serif;
+    --font-highlight: 'Black Han Sans', sans-serif;
+
+    /* Define heights */
+    --height-nav: 40px;
+
+    /* Define color scheme */
+    --color-white-transparent: rgba(255, 255, 255, 0.92);
+}
+
+
+/**********************************
+    General
+***********************************/
+
+/* Window */
+body {
+    font-family: var(--font-main);
+    font-size  : 20px;
+}
+
+#ani-device-detector {
+    font-size: 4px;
+}
+
+.ani-mobile-page {
+    display: none;
+}
+
+/* Fonts */
+h1 {
+    font-family   : var(--font-highlight);
+    font-size     : 2.8em;
+    height        : 1.4em;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Vertical separators */
+.ani-attacher-1 {
+    margin-bottom: 0;
+}
+
+.ani-separator-1 {
+    height: 0.4em;
+}
+
+.ani-separator-2 {
+    height: 1.2em;
+}
+
+.ani-separator-3 {
+    height: 2em;
+}
+
+/* Navbar */
+/* Source: https://stackoverflow.com/questions/35552708/is-materialize-navbar-height-adjustment-possible */
+nav, nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons, nav .button-collapse i {
+    height     : var(--height-nav);
+    line-height: var(--height-nav);
+}
+
+nav .brand-logo {
+    font-family   : var(--font-highlight);
+    font-size     : 1.05em;
+    height        : 1.4em;
+    letter-spacing: 0.04em;
+    top           : 0.15em;
+    margin-left   : 1em;
+}
+
+/* Couldn't fix the logo. Need to come back */
+nav .brand-logo img {
+    height: 100%;
+}
+
+nav .ani-menu-desktop-items {
+    font-size     : 0.75em;
+    letter-spacing: 0.01em;
+}
+
+nav #ani-menu-desktop li:last-child {
+    margin-right: 1em;
+}
+
+/* Footer */
+footer a:hover {
+    text-decoration: underline;
+}
+
+#ani-footer-social li {
+    font-size    : 1.6em;
+    float        : left;
+    padding-right: 0.9em;
+}
+
+.footer-copyright {
+    font-size: 0.75em;
+}
+
+/* Form */
+.input-field {
+    margin-top   : 0.6em;
+    margin-bottom: 0.6em;
+}
+
+label {
+    font-size: 0.85em !important;
+}
+
+button {
+    font-size: 0.85em !important;
+    width    : 100%;
+}
+
+/* Image */
+img.circle {
+    width: 100%;
+}
+
+/* Materialize card */
+.card label {
+    font-size: 1.2em !important;
+}
+
+.card input {
+    font-size    : 1.2em !important;
+    margin-top   : 0.75em !important;
+    margin-bottom: 1.5em !important;
+}
+
+.card p {
+    font-size: 1.2em !important;
+}
+
+.card a.btn-floating:hover {
+    background: #ffa000 !important;
+}
+
+.ani-card img {
+    object-fit: cover;
+    width     : 100%;
+    height    : 500px;
+}
+
+.ani-card-preview img {
+    object-fit: cover;
+    width     : 100%;
+    height    : 240px;
+}
+
+/* Fixed action button */
+.fixed-action-btn {
+    float   : right;
+    position: relative;
+    right   : 0.5em;
+    bottom  : 1.5em;
+}
+
+/**********************************
+    Page-specific
+***********************************/
+/* Signup, Login */
+#ani-signup > .col, #ani-login > .col {
+    background-color: var(--color-white-transparent);
+    border-radius   : 2px;
+}
+
+.ani-vertical-align-wrapper {
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+}
+
+.ani-vertical-align-wrapper > .col {
+    position: relative;
+    top     : calc(-1 * var(--height-nav));
+}
+
+h1.brand-logo img {
+    height: 100%;
+}
+
+/* Animals */
+.ani-animal:hover {
+    transform : scale(1.05);
+    transition: all 0.2s;
+}
+
+/* Profile */
+#ani-user-stats {
+    font-size: 1.3em;
+}
+
+#ani-user-stats #ani-numStories,
+#ani-user-stats #ani-numAnimals,
+#ani-user-stats #ani-numDogs {
+    font-size: 1.75em;
+}
+
+/* Meet Ani */
+#ani-about-ani > .col {
+    background-color: var(--color-white-transparent);
+    border-radius   : 2px;
+}
+
+/* Meet Ani Team */
+
+
+/**********************************
+    Media query
+***********************************/
+
+/* Tablet and larger */
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height     : var(--height-nav);
+        line-height: var(--height-nav);
+    }
+}
+
+/* Desktop */
+@media all and (max-width: 1200px), all and (max-device-width: 1200px) {
+    #ani-device-detector {
+        font-size: 3px;
+    }
+
+    .ani-card img {
+        height: 460px;
+    }
+
+    .ani-card-preview img {
+        height: 200px;
+    }
+}
+
+/* Tablet */
+@media all and (max-width: 992px), all and (max-device-width: 992px) {
+    #ani-device-detector {
+        font-size: 2px;
+    }
+
+    .ani-desktop-page {
+        display: none;
+    }
+
+    .ani-mobile-page {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    nav .brand-logo {
+        margin-left: 0;
+    }
+
+    .ani-card img {
+        height: 300px;
+    }
+
+    .ani-card-preview img {
+        height: 240px;
+    }
+
+    .card p {
+        font-size: 1em !important;
+    }
+
+    #ani-user-stats {
+        font-size: 1.2em;
+    }
+
+    #ani-user-stats #ani-numStories,
+    #ani-user-stats #ani-numAnimals,
+    #ani-user-stats #ani-numDogs {
+        font-size: 1.4em;
+    }
+}
+
+/* Mobile */
+@media all and (max-width: 600px), all and (max-device-width: 600px) {
+    #ani-device-detector {
+        font-size: 1px;
+    }
+
+    .ani-card img {
+        height: 280px;
+    }
+
+    .ani-card-preview img {
+        height: 280px;
+    }
+}

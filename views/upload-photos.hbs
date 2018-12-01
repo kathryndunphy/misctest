@@ -1,0 +1,52 @@
+<div class="ani-separator-2"></div>
+
+<div class="row">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl6 offset-xl3">
+        <h1 class="ani-attacher-1">Upload photos</h1>
+    </div>
+</div>
+<div class="ani-separator-2"></div>
+<form id = "picInfo"action="/api/upload-photos" method="POST">
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <div class="row">
+        <div class="col s12 m10 offset-m1 l8 offset-l2 xl6 offset-xl3">
+            <div class="card">
+                <div class="card-content">
+                    <div class="input-field">
+                        <label for="ani-title" class="blue-grey-text text-darken-2">Title</label>
+                        <input type="text" name="title" id="ani-title" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="ani-cp" class="blue-grey-text text-darken-2">Caption</label>
+                        <input type="text" name="caption" id="ani-cap" class="validate" required>
+                    </div>
+                    <button type="submit" class="btn-large waves-effect waves-light" id = "addStory" title="Click to publish.">Publish</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</form>    
+<div class="ani-separator-2"></div>
+
+
+{{!-- <div class="row">
+    <div class="col s12 m10 offset-m1 l8 offset-l2 xl6 offset-xl3">
+        <div class="card">
+            <div class="card-content">
+                <div class="ani-separator-2"></div>
+
+                <form action="/api/upload-photos" method="POST" class="dropzone" id="ani-form-upload-photos" enctype="multipart/form-data">
+                    <div class="fallback">
+                        <label for="ani-photos" class="blue-grey-text text-darken-2">Photos</label>
+                        <input type="file" name="photos" id="ani-photos" multiple>
+                    </div>
+                </form>
+
+                <div class="ani-separator-2"></div>
+            </div>
+        </div>
+
+        <div class="ani-separator-3"></div>
+    </div>
+</div> --}}

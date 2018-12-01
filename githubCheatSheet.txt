@@ -1,0 +1,65 @@
+git checkout -b s-feature //Create a new branch & checout as well
+
+After merging, we can delete the feature branch. If we dont delete the remote tracking branch, we can live with it but we will not be able to reuse the same name.
+If i need to merge s-feature in development, if there is no branch on remote, we can continue otherwise we have to push my branch online first by 
+
+git push
+now we have s-feature online as well 
+
+Local:
+git co development
+git pull //to sync development with github
+git merge s-feature //merge s-feature to developmet locally
+git push //merge s-feature online as well on github
+
+If we want to keep it around then we can but I would love to delete s-feature branch locally & remote after moving the pointer
+To do necessary merges:
+git checkout s-feature
+git merge development //pointer will move from s-feature to development
+git push //s-feature will move from s-feature to developmet in github as well
+
+Now we can delete local & remote feature branches both.
+
+////////////////////////////////////////// Delete ///////////////////////////////////////////////
+git branch --delete s-feature //local
+git branch --D s-feature //local if its not merged
+git branch --delete -r origin/s-feature //delete reomte tracking branch
+
+////////////////// Merge development to Master ///////////////////////
+git co master
+git pull
+git merge development
+
+
+//////////////////////////// add 'node_modules' to .gitignore file /////////////////////////////////
+//////Example 1
+git rm -r --cached node_modules
+git commit -m 'Remove the now ignored directory node_modules'
+git push origin master
+
+//////Example 2
+git rm -r --cached githubCheatSheet.txt
+git commit -m 'Remove the now ignored directory node_modules'
+git push origin master
+
+////////////////////////////////////////// New Branch ///////////////////////////////////////////////
+git branch s-feature //new branch
+git checkout s-feature //Switch to newly created branch
+
+/////////////////////////////////////////// Others //////////////////////////////////////////////////
+git branch -a //list all branches
+git lg //check log either lg or log
+git push --set-upstream origin s-feature //to push to a specific branch
+
+
+/////////////////////////////////////////// Crap //////////////////////////////////////////////////
+For pull request:
+First one will be base where you want to push "master most of the time"
+On terminal we have to do 
+git co master
+git pull
+git lg
+
+1. git config --global alias.co checkout
+2. https://bitly.com/
+3. heroku logs --tail --app "dogwithfriends-dev"

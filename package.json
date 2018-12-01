@@ -1,0 +1,41 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "Dogs With Friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohai9/Project-2.git"
+  },
+  "author": "sohai9, christian, kathryn, zeeemaan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sohai9/Project-2/issues"
+  },
+  "homepage": "https://github.com/sohai9/Project-2#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^2.3.1",
+    "aws-sdk": "^2.361.0",
+    "bcrypt": "^3.0.2",
+    "blueimp-file-upload": "^9.28.0",
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.13.2",
+    "cloudinary-jquery-file-upload": "^2.5.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "exphbs": "^1.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "image-size": "^0.6.3",
+    "jquery": "^3.3.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.4",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.2"
+  }
+}

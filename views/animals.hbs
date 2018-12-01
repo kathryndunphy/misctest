@@ -1,0 +1,22 @@
+<div class="ani-separator-2"></div>
+
+<h1>Animals</h1>
+
+<div class="row">
+    {{#each animals}}
+    <div class="col s4 m3 xl2">
+        <div class="row">
+            <div class="col s10 offset-s1 ani-animal">
+                <a href="/profile_{{this.id}}">
+                    <img src="{{this.url_photo}}" class="responsive-img circle" alt="{{this.fullname}}">
+                    <div class="center-align">{{this.fullname}}</div>
+                </a>
+
+                <div class="ani-separator-1"></div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<div class="ani-separator-3"></div>

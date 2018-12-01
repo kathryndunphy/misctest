@@ -1,0 +1,100 @@
+<div class="ani-separator-2"></div>
+
+<div class="row">
+    <div class="col s12 m10 offset-m1 l12">
+        <h1 class="ani-attacher-1">Settings</h1>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Left pane -->
+    <div class="col s12 m10 offset-m1 l6">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 l10 offset-l1">
+                        <h2>Update profile</h2>
+
+                        <div class="ani-separator-2"></div>
+
+                        <form action="/api/update-profile_{{animal.id}}?_method=PATCH" method="POST">
+                            <div class="input-field">
+                                <label for="ani-fullname" class="blue-grey-text text-darken-2">Full name</label>
+                                <input type="text" name="fullname" id="ani-fullname" class="validate" value="{{animal.fullname}}" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label for="ani-email" class="blue-grey-text text-darken-2">Email</label>
+                                <input type="text" name="email" id="ani-email" class="validate" value="{{animal.email}}" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label for="ani-username" class="blue-grey-text text-darken-2">Username</label>
+                                <input type="text" name="username" id="ani-username" class="validate" value="{{animal.username}}" required>
+                            </div>
+
+                            <div class="ani-separator-2"></div>
+
+                            <button type="submit" class="btn-large waves-effect waves-light" title="Click to update.">Update</button>
+                        </form>
+
+                        <div class="ani-separator-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right pane -->
+    <div class="col s12 m10 offset-m1 l6">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 l10 offset-l1">
+                        <h2>Update password</h2>
+
+                        <div class="ani-separator-2"></div>
+
+                        <form action="/api/update-password_{{animal.id}}?_method=PATCH" method="POST">
+                            <div class="input-field">
+                                <label for="ani-current-password" class="blue-grey-text text-darken-2">Current password</label>
+                                <input type="password" name="password_current" id="ani-current-password" class="validate" placeholder="********" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label for="ani-new-password" class="blue-grey-text text-darken-2">New password</label>
+                                <input type="password" name="password_new" id="ani-new-password" class="validate" placeholder="" required>
+                            </div>
+
+                            <div class="ani-separator-2"></div>
+
+                            <button type="submit" class="btn-large waves-effect waves-light" title="Click to update.">Update</button>
+                        </form>
+
+                        <div class="ani-separator-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12 l10 offset-l1">
+                        <h2>Delete Ani account</h2>
+
+                        <div class="ani-separator-3"></div>
+
+                        <form action="/api/delete-account_{{animal.id}}?_method=DELETE" method="POST">
+                            <button type="submit" class="btn-large waves-effect waves-light red darken-2" title="Click to delete Ani account.">Delete Account</button>
+                        </form>
+
+                        <div class="ani-separator-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ani-separator-3"></div>

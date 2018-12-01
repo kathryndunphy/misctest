@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Animals are beautiful people.">
+    <meta name="keywords" content="Animals with Friends, sohai9, christian, kathryn, zeeemaan">
+    <meta name="author" content="sohai9, christian, kathryn, zeeemaan">
+    <meta name="theme-color" content="#000000">
+
+    <title>Dogs with Friends</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+    <!-- Import fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Roboto" rel="stylesheet">
+
+    <!-- Import Materialize -->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize/materialize.min.css" media="screen,projection">
+
+    <!-- Custom CSS -->
+    {{#each customCSS}}
+    <link rel="stylesheet" type="text/css" href="assets/css/{{this}}.css">
+    {{/each}}
+</head>
+
+<body class="blue-grey lighten-5">
+    <!-- Navbar -->
+    {{#if aniId}}
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper teal darken-4">
+                <a>Dogs with Friends</a>
+                {{!-- Todo: Customize the ani-menu-mobile --}}
+                <a href="#" data-activates="ani-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                <!-- Desktop -->
+                {{!-- Todo: Customize the ani-dropdown-writer --}}
+                <ul id="ani-dropdown-writer" class="dropdown-content">
+                    <li><a href="/meet-ani">Animals</a></li>
+                    <li><a href="/meet-ani-team">Meet Team</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down" id="ani-menu-desktop">
+                    <li><a class="ani-menu-desktop-items" href="/">Home<i class="material-icons right">home</i></a></li>
+                    <li class="teal lighten-1"><a class="ani-menu-desktop-items" href="/upload-photos">Compose<i class="material-icons right">add_a_photo</i></a></li>
+                    <li><a class="ani-menu-desktop-items" href="/animals">Find Animals<i class="material-icons right">group</i></a></li>
+                    <li><a class="ani-menu-desktop-items dropdown-button" href="#" data-activates="ani-dropdown-writer">{{aniFullname}}<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile -->
+    <ul class="side-nav" id="ani-menu-mobile">
+        <li class="black-text center-align">{{aniFullname}}</li>
+
+        <li class="divider"></li>
+
+        <li><a class="ani-menu-mobile-items" href="/">Home</a></li>
+        <li class="teal lighten-1"><a class="ani-menu-mobile-items" href="/upload-photos">Compose</a></li>
+        <li><a class="ani-menu-mobile-items" href="/animals">Find Animals</a></li>
+
+        <li class="divider"></li>
+
+        <li><a class="ani-menu-mobile-items" href="/meet-ani">Animals</a></li>
+        <li><a class="ani-menu-mobile-items" href="/meet-ani-team">Meet Team</a></li>
+
+        <li class="divider"></li>
+
+        <li><a class="ani-menu-mobile-items" href="/settings">Settings</a></li>
+        <li><a class="ani-menu-mobile-items" href="/logout">Logout</a></li>
+    </ul>
+    {{else}}
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper teal darken-4">
+                <a>Dogs with Friends</a>
+                <a href="#" data-activates="ani-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                <!-- Desktop -->
+                <ul class="right hide-on-med-and-down" id="ani-menu-desktop">
+                    <li><a class="ani-menu-desktop-items" href="/">Home</a></li>
+                    <li><a href="/meet-ani">Animals</a></li>
+                    <li><a href="/meet-ani-team">Meet Team</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile -->
+    <ul class="side-nav" id="ani-menu-mobile">
+        <li><a class="ani-menu-mobile-items" href="/">Home</a></li>
+        <li><a class="ani-menu-mobile-items" href="/meet-ani">Animals</a></li>
+        <li><a class="ani-menu-mobile-items" href="/meet-ani-team">Meet Team</a></li>
+    </ul>
+    {{/if}}
+
+    <div class="container">
+        {{{body}}}
+    </div>
+    {{!-- //Added separation --}}
+    <div class="ani-separator-3"></div>
+    <br>
+    <footer class="page-footer teal darken-5">
+        <div class="container">
+            <div class="row">
+                <div class="col s5 l4 offset-l2">
+                    <h3 class="white-text">Follow us!</h3>
+
+                    <ul id="ani-footer-social">
+                        <div class="row">
+                            <div class="col s3 l2">
+                                <li><a class="white-text text-lighten-3" href="https://github.com/sohai9/Project-2"
+                                        target="_blank" title="Follow Animals on GitHub!"><i class="fa fa-github-square"
+                                            aria-hidden="true"></i></a></li>
+                            </div>
+                            <div class="col s3 l2">
+                                <li><a class="white-text text-lighten-3" href="https://www.facebook.com" target="_blank"
+                                        title="Follow Animals on Facebook!"><i class="fa fa-facebook-square"
+                                            aria-hidden="true"></i></a></li>
+                            </div>
+                            <div class="col s3 l2">
+                                <li><a class="white-text text-lighten-3" href="https://www.linkedin.com" target="_blank"
+                                        title="Follow Animals on LinkedIn!"><i class="fa fa-linkedin-square"
+                                            aria-hidden="true"></i></a></li>
+                            </div>
+                            <div class="col s3 l2">
+                                <li><a class="white-text text-lighten-3" href="https://www.instagram.com" target="_blank"
+                                        title="Follow Animals on Instagram!"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </div>
+                            <div class="col s3 l2">
+                                <li><a class="white-text text-lighten-3" href="https://www.twitter.com" target="_blank"
+                                        title="Follow Animals on Twitter!"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="col s6 offset-s1 l4 offset-l1">
+                    <h3 class="white-text">Links</h3>
+
+                    <ul id="ani-footer-links">
+                        <li><a class="white-text text-lighten-3" href="/">Home</a></li>
+                        {{#if aniId}}
+                        <li><a class="white-text text-lighten-3" href="/compose">Compose</a></li>
+                        <li><a class="white-text text-lighten-3" href="/animals">Find Animals</a></li>
+                        {{/if}}
+                        <li><a class="white-text text-lighten-3" href="/meet-ani">Animals</a></li>
+                        <li><a class="white-text text-lighten-3" href="/meet-ani-team">Meet Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright teal darken-4">
+            <div class="container">
+                <div class="center-align">
+                    Copyright © 2018 by <a class="lime-text text-lighten-4" href="https://www.linkedin.com/" target="_blank">sohai9</a>,
+                    <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/christian-henry-27a7a7167/"
+                        target="_blank">Christian</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/pzamoranos/"
+                        target="_blank">Zeeemaan</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/kathryndunphy/"
+                        target="_blank">Kathryn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {{!-- picture upload --}}
+
+    <script src="node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.iframe-transport.js" type="text/javascript"></script>
+    <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js" type="text/javascript"></script>
+    <script src="node_modules/cloudinary-jquery-file-upload/cloudinary-jquery-file-upload.js"></script>
+
+    <!-- Import jQuery before materialize.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    {{!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> --}}
+    <script type="text/javascript" src="assets/javascript/materialize/materialize.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    {{#each customJavascript}}
+    <script type="text/javascript" src="assets/javascript/{{this}}.js"></script>
+    {{/each}}
+
+</body>
+
+</html>
