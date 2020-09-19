@@ -19,7 +19,7 @@
   "dependencies": {
     "@google-cloud/storage": "^2.3.1",
     "aws-sdk": "^2.361.0",
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "blueimp-file-upload": "^9.28.0",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.13.2",
